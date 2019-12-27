@@ -1,0 +1,61 @@
+#\u4F7F\u7528\u7AEF\u53E3
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /api/v1
+
+controller:
+  scanPackage: com.lzh.controller
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lzh?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,logback
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+    useGlobalDataSourceStat: true
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    password:
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
+mybatis-plus:
+  config-location: classpath:/com/lzh/mapper/xml/*Mapper.xml
+  type-aliases-package: com.lzh.entity
+
+
+logging:
+  config: classpath:config/logback-spring.xml
+  level:
+    root: info
+    com.lzh.mapper: debug
+  path: logs/
+  file: lzh.log
+
+
+
