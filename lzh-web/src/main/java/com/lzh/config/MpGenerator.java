@@ -31,7 +31,7 @@ public class MpGenerator {
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(true);// XML columList
         // .setKotlin(true) 是否生成 kotlin 代码
-        gc.setAuthor("liugh");
+        gc.setAuthor("lzh");
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
         // gc.setMapperName("%sDao");
@@ -56,7 +56,7 @@ public class MpGenerator {
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("root");
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/liugh?characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/lzh?characterEncoding=utf8");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -88,7 +88,7 @@ public class MpGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.liugh");
+        pc.setParent("com.lzh");
 //        pc.setModuleName("entity");
         mpg.setPackageInfo(pc);
 

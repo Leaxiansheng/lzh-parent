@@ -41,7 +41,7 @@ public class LoginController {
                     , required = true, dataType = "String",paramType="body")
     })
     @PostMapping("/login")
-    @Log(action="SignIn",modelName= "Login",description="前台密码登录接口")
+    //@Log(action="SignIn",modelName= "Login",description="前台密码登录接口")
     @Pass
     //5秒产生一个令牌,放入容量为0.3的令牌桶
     @AccessLimit(perSecond=0.3,timeOut = 5000)

@@ -7,10 +7,12 @@ import com.lzh.entity.Menu;
 import com.lzh.mapper.MenuMapper;
 import com.lzh.service.IMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements IMenuService {
 
     @Autowired
