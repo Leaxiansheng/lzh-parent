@@ -78,7 +78,7 @@
 
 		<rest-assured.version>2.9.0</rest-assured.version>
 
-		<ant.version>1.9.7</ant.version>
+		<ant.version>1.9.15</ant.version>
 
 		<velocity.version>1.7</velocity.version>
 
