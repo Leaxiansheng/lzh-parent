@@ -56,7 +56,7 @@
 
 		<spring-boot-starter-aop.version>2.0.6.RELEASE</spring-boot-starter-aop.version>
 
-		<jsoup.version>1.8.1</jsoup.version>
+		<jsoup.version>1.15.3</jsoup.version>
 
 		<velocity.version>1.7</velocity.version>
 
